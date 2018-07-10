@@ -14,7 +14,10 @@ function nowServing(katzDeliLine) {
 
 function currentLine(katzDeliLine) {
   if(katzDeliLine.length>0) {
-    return katzDeliLine.shift()
+    var lineList;
+    while(katzDeliLine.length>0) {
+      lineList += katzDeliLine.shift()
+    }
   }
   else {
     return "The line is currently empty."
